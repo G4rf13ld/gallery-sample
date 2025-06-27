@@ -131,7 +131,8 @@ class VerticalCarousel extends React.Component {
           {this.getPresentableSlides().map((slide, presentableIndex) => (
             <Slide
               key={slide.key}
-              content={slide.content}
+              content={slide.text}
+              url={slide.url}
               moveSlide={this.moveSlide}
               offsetRadius={this.clampOffsetRadius(offsetRadius)}
               index={presentableIndex}

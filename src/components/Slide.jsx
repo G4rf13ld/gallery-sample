@@ -15,11 +15,11 @@ const SlideContainer = styled.div`
 
 const SlideCard = styled.div`
   position: relative;
-  max-width: 50%;
+  max-width: 90%;
   min-width: 30%;
   width: 100vw;
   height: 100%;
-  background: white;
+  background: #666;
   font-size: 35px;
   display: flex;
   align-items: center;
@@ -29,6 +29,7 @@ const SlideCard = styled.div`
 
 function Slide({
   content,
+  url,
   offsetRadius,
   index,
   animationConfig,
@@ -91,7 +92,11 @@ function Slide({
           }}
         >
           <SlideCard onClick={() => moveSlide(offsetFromMiddle)}>
-            {content}
+            {/* {content} */}
+            <img src={url} />
+            <div className="absolute z-20 w-full min-h-[100px] max-h-[240px] bottom-0 px-4 pb-4 pt-2 text-white text-lg bg-slate-700/65">
+              {content}
+            </div>
           </SlideCard>
         </SlideContainer>
       )}
